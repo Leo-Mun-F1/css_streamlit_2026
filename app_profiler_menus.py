@@ -14,9 +14,7 @@ menu = st.sidebar.radio(
 
 # Dummy STEM data
 physics_data = pd.DataFrame({
-    "Experiment": ["Alpha Decay", "Beta Decay", "Gamma Ray Analysis", "Quark Study", "Higgs Boson"],
-    "Energy (MeV)": [4.2, 1.5, 2.9, 3.4, 7.1],
-    "Date": pd.date_range(start="2024-01-01", periods=5),
+    
 })
 
 astronomy_data = pd.DataFrame({
@@ -48,8 +46,8 @@ if menu == "Researcher Profile":
     st.write(f"**Institution:** {institution}")
     
     st.image(
-    "https://i.pinimg.com/736x/45/10/d6/4510d6880fc71d3b6e19c12f065eaf27.jpg",
-    caption="Nature (Pixabay)"
+    "https://i.pinimg.com/736x/f9/b1/81/f9b18101f25798c593ef6beca8e20f5f.jpg",
+    caption="Green Rain"
 )
 
 elif menu == "Publications":
@@ -134,6 +132,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
