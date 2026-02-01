@@ -39,8 +39,8 @@ if menu == "Researcher Profile":
 
     # Collect basic information
     name = "Mr ML Munyai"
-    field = "Astrophysics"
-    institution = "University of Science"
+    field = "Data Science"
+    institution = "University of Venda"
 
     # Display basic profile information
     st.write(f"**Name:** {name}")
@@ -134,3 +134,4 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
