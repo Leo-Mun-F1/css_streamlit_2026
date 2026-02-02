@@ -58,7 +58,7 @@ if menu == "Researcher Profile":
     
     st.image(
     "https://i.pinimg.com/736x/bb/77/72/bb7772074ede4af7dd24a843856c691a.jpg",
-    caption="Green Rain"
+    caption="</>"
 )
 
 elif menu == "Publications":
@@ -139,6 +139,7 @@ elif menu == "Contact":
 
     st.write(f"You can reach me at {email}.")
     st.write(f"For Phone Call: {contact}")
+
 
 
 
