@@ -126,7 +126,7 @@ elif menu == "STEM Data Explorer":
         filtered_cars = cars_data[
             cars_data["Horsepower"].between(Horsepower_filter[0], Horsepower_filter[1])
         ]
-        st.write(f"Filtered Results for Horsepower {Horsepower_filter}:")
+        st.write(f"Filtered Results for Cars {Horsepower_filter}:")
         st.dataframe(filtered_cars)
         
         
@@ -134,9 +134,12 @@ elif menu == "STEM Data Explorer":
 elif menu == "Contact":
     # Add a contact section
     st.header("Contact Information")
-    email = "jane.doe@example.com"
+    email = "leodwick44@gmail.com"
+    contact = "+27 82 394 8992"
 
     st.write(f"You can reach me at {email}.")
+    st.write(f"For Phone Call: {contact}")
+
 
 
 
