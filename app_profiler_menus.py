@@ -13,7 +13,7 @@ menu = st.sidebar.radio(
 )
 
 # Dummy STEM data
-physics_data = pd.DataFrame({ "Method":["Regression Analysis","Cluster Analysis",
+data_science_data = pd.DataFrame({ "Method":["Regression Analysis","Cluster Analysis",
 "Time Series Analysis" ,"Factor Analysis","Sentiment Analysis"], 
 "Descriptins":["Statistical method to model relationships between variables",
 "Groups similar data points into clusters" ,
@@ -28,13 +28,14 @@ physics_data = pd.DataFrame({ "Method":["Regression Analysis","Cluster Analysis"
     
 })
 
-astronomy_data = pd.DataFrame({
-    "Celestial Object": ["Mars", "Venus", "Jupiter", "Saturn", "Moon"],
-    "Brightness (Magnitude)": [-2.0, -4.6, -1.8, 0.2, -12.7],
-    "Observation Date": pd.date_range(start="2024-01-01", periods=5),
+computer_data = pd.DataFrame({
+    "PC Model": ["Alienware Aurora R15", "Corsair One i500", "Alienware Area-51","Dell Tower Plus", "Acer Predator Orion 5000"],
+    "Geekbench 6 (multi-core)": [22494 , 21560, 21786, 19181, 16534],
+    "1080p Frame Rate (GTA V)":[186, 186, 185, 182, 169]
+    
 })
 
-weather_data = pd.DataFrame({
+cars_data = pd.DataFrame({
     "City": ["Cape Town", "London", "New York", "Tokyo", "Sydney"],
     "Temperature (°C)": [25, 10, -3, 15, 30],
     "Humidity (%)": [65, 70, 55, 80, 50],
@@ -97,18 +98,18 @@ elif menu == "STEM Data Explorer":
     # Tabbed view for STEM data
     data_option = st.sidebar.selectbox(
         "Choose a dataset to explore", 
-        ["Physics Experiments", "Astronomy Observations", "Weather Data"]
+        ["Top 5 Data Science Methods", "Top 5 Data Analysis PC", "Top 5 Sports Cars"]
     )
 
     if data_option == "Physics Experiments":
         st.write("### Physics Experiment Data")
-        st.dataframe(physics_data)
+        st.dataframe(data-science_data)
         # Add widget to filter by Energy levels
      
 
     elif data_option == "Astronomy Observations":
         st.write("### Astronomy Observation Data")
-        st.dataframe(astronomy_data)
+        st.dataframe(computer_data)
         # Add widget to filter by Brightness
         brightness_filter = st.slider("Filter by Brightness (Magnitude)", -15.0, 5.0, (-15.0, 5.0))
         filtered_astronomy = astronomy_data[
@@ -138,6 +139,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
