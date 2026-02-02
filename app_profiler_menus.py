@@ -38,7 +38,7 @@ computer_data = pd.DataFrame({
 cars_data = pd.DataFrame({
   "Car Model":["Rimac Nevera R", "Hennessey Venom F5", "Lotus Evija", "Bugatti Chiron Super Sport 300+", "SSC Tuatara", "Koenigsegg Jesko", "Koenigsegg Regera", "Bugatti Veyron Super Sport", "Koenigsegg One:1", "McLaren Speedtail"],
    "Horsepower":[2079, 1817, 2012, 1578, 1750, 1578, 1479, 1183, 1341, 1050],
-    "Top Speed":[412 km/h (256 mph), 484 km/h (301 mph), 320 km/h (200 mph), 440 km/h (273 mph), 443 km/h (275 mph), 418 km/h (260 mph), 403 km/h (250 mph), 431 km/h (268 mph), 440 km/h (273 mph), 403 km/h (250 mph)],
+    "Top Speed":["412 km/h (256 mph)", "484 km/h (301 mph)", "320 km/h (200 mph)", "440 km/h (273 mph)", "443 km/h (275 mph)", "418 km/h (260 mph)", "403 km/h (250 mph)", "431 km/h (268 mph)", "440 km/h (273 mph)", "403 km/h (250 mph)"]
 })
 
 # Sections based on menu selection
@@ -137,6 +137,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
