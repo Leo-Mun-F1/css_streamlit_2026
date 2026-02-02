@@ -106,7 +106,7 @@ elif menu == "STEM Data Explorer":
         # Add widget to filter by Energy levels
         energy_filter = st.slider("Filter by Descriptions", 0.0, 10.0, (0.0, 10.0))
         filtered_physics = physics_data[
-            physics_data["Energy (MeV)"].between(energy_filter[0], energy_filter[1])
+            physics_data["Descriptions"].between(energy_filter[0], energy_filter[1])
         ]
         st.write(f"Filtered Results for Energy Range {energy_filter}:")
         st.dataframe(filtered_physics)
@@ -143,6 +143,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
