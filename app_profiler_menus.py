@@ -112,7 +112,7 @@ elif menu == "STEM Data Explorer":
         # Add widget to filter by Brightness
         computer_filter = st.slider("Filter by Geekbench 6 (multi-core)", 16000, 22500, (16000, 22500))
         filtered_computer = computer_data[
-            computer_data["Geekbench 6 (multi-core)"].between(computer_filter[0], computer_filter[5])
+            computer_data["Geekbench 6 (multi-core)"].between(computer_filter[0], computer_filter[4])
         ]
         st.write(f"Filtered Results for Brightness Range {computer_filter}:")
         st.dataframe(filtered_computer)
@@ -137,6 +137,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
