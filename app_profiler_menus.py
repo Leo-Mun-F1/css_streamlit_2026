@@ -97,7 +97,7 @@ elif menu == "STEM Data Explorer":
     # Tabbed view for STEM data
     data_option = st.sidebar.selectbox(
         "Choose a dataset to explore", 
-        ["Top 5 Data Science Methods", "Top 5 Data Analysis PC", "Top 5 Sports Cars"]
+        ["Top 5 Data Science Methods", "Top 5 Data Analysis PC", "Top 10 Sports Cars"]
     )
 
     if data_option == "Top 5 Data Science Methods":
@@ -114,7 +114,7 @@ elif menu == "STEM Data Explorer":
         filtered_computer = computer_data[
             computer_data["Geekbench 6 (multi-core)"].between(computer_filter[0], computer_filter[1])
         ]
-        st.write(f"Filtered Results for Brightness Range {computer_filter}:")
+        st.write(f"Filtered Results for PC Range {computer_filter}:")
         st.dataframe(filtered_computer)
 
     elif data_option == "Top 10 Sports Cars":
@@ -137,6 +137,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
