@@ -102,7 +102,7 @@ elif menu == "STEM Data Explorer":
 
     if data_option == "Top 5 Data Science Methods":
         st.write("### Top 5 Data Science Methods")
-        st.dataframe(data-science_data)
+        st.dataframe(data_science_data)
         # Add widget to filter by Energy levels
      
 
@@ -112,7 +112,7 @@ elif menu == "STEM Data Explorer":
         # Add widget to filter by Brightness
         computer_filter = st.slider("Filter by Geekbench 6 (multi-core)", 16000, 22500, (16000, 22500))
         filtered_computer = computer_data[
-            computer_data["Geekbench 6 (multi-core)"].between(computer_filter[0], computer_filter[4])
+            computer_data["Geekbench 6 (multi-core)"].between(computer_filter[0], computer_filter[1])
         ]
         st.write(f"Filtered Results for Brightness Range {computer_filter}:")
         st.dataframe(filtered_computer)
@@ -124,7 +124,7 @@ elif menu == "STEM Data Explorer":
         
         Horsepower_filter = st.slider("Filter by Horsepower", 1000, 3000, (1000, 3000))
         filtered_cars = cars_data[
-            cars_data["Horsepower"].between(Horsepower_filter[0], Horsepower_filter[10])
+            cars_data["Horsepower"].between(Horsepower_filter[0], Horsepower_filter[1])
         ]
         st.write(f"Filtered Results for Horsepower {Horsepower_filter}:")
         st.dataframe(filtered_cars)
@@ -137,6 +137,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
