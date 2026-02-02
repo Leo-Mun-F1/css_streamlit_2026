@@ -13,14 +13,14 @@ menu = st.sidebar.radio(
 )
 
 # Dummy STEM data
-physics_data = pd.DataFrame({ "Method":["Regression Analysis","Cluster Analysis","
-"Time Series Analysis"
-"Factor Analysis"
-,"Sentiment Analysis"], "Descriptins": ["Statistical method to model relationships between variables",
+physics_data = pd.DataFrame({ "Method":["Regression Analysis","Cluster Analysis",
+"Time Series Analysis" ,"Factor Analysis","Sentiment Analysis"], 
+"Descriptins":["Statistical method to model relationships between variables",
 "Groups similar data points into clusters" ,
 "Analyzes data over time to detect trends" ,
 "Reduces data complexity by identifying underlying factors",
-"Analyzes text data to determine sentiment"], "Applications":["Forecasting, Optimization" ,
+"Analyzes text data to determine sentiment"], 
+ "Applications":["Forecasting, Optimization" ,
 "Customer Segmentation, Pattern Discovery" ,
 "Forecasting, Anomaly Detection" ,
 "Dimensionality reduction, Pattern discovery" ,
@@ -143,6 +143,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
