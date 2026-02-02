@@ -124,7 +124,7 @@ elif menu == "STEM Data Explorer":
         
         Horsepower_filter = st.slider("Filter by Horsepower (hp)", 1000, 3000, (1000, 3000))
         filtered_cars = cars_data[
-            cars_data["Horsepower"].between(Horsepower_filter[1000], Horsepower_filter[3000])
+            cars_data["Horsepower"].between(Horsepower_filter[0], Horsepower_filter[5])
         ]
         st.write(f"Filtered Results for Horsepower {Horsepower_filter}:")
         st.dataframe(filtered_cars)
@@ -137,6 +137,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
