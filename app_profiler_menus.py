@@ -36,10 +36,9 @@ computer_data = pd.DataFrame({
 })
 
 cars_data = pd.DataFrame({
-    "City": ["Cape Town", "London", "New York", "Tokyo", "Sydney"],
-    "Temperature (°C)": [25, 10, -3, 15, 30],
-    "Humidity (%)": [65, 70, 55, 80, 50],
-    "Recorded Date": pd.date_range(start="2024-01-01", periods=5),
+  "Car Model":["Rimac Nevera R", "Hennessey Venom F5", "Lotus Evija", "Bugatti Chiron Super Sport 300+", "SSC Tuatara", "Koenigsegg Jesko", "Koenigsegg Regera", "Bugatti Veyron Super Sport", "Koenigsegg One:1", "McLaren Speedtail"],
+   "Horsepower":[2079, 1817, 2012, 1578, 1750, 1578, 1479, 1183, 1341, 1050]
+    "Top Speed":[412 km/h (256 mph), 484 km/h (301 mph), 320 km/h (200 mph), 440 km/h (273 mph), 443 km/h (275 mph), 418 km/h (260 mph), 403 km/h (250 mph), 431 km/h (268 mph), 440 km/h (273 mph), 403 km/h (250 mph)]
 })
 
 # Sections based on menu selection
@@ -101,14 +100,14 @@ elif menu == "STEM Data Explorer":
         ["Top 5 Data Science Methods", "Top 5 Data Analysis PC", "Top 5 Sports Cars"]
     )
 
-    if data_option == "Physics Experiments":
-        st.write("### Physics Experiment Data")
+    if data_option == "Top 5 Data Science Methods":
+        st.write("### Top 5 Data Science Methods")
         st.dataframe(data-science_data)
         # Add widget to filter by Energy levels
      
 
-    elif data_option == "Astronomy Observations":
-        st.write("### Astronomy Observation Data")
+    elif data_option == "Top 5 Data Analysis PC":
+        st.write("### Top 5 Data Analysis PC")
         st.dataframe(computer_data)
         # Add widget to filter by Brightness
         brightness_filter = st.slider("Filter by Brightness (Magnitude)", -15.0, 5.0, (-15.0, 5.0))
@@ -118,18 +117,17 @@ elif menu == "STEM Data Explorer":
         st.write(f"Filtered Results for Brightness Range {brightness_filter}:")
         st.dataframe(filtered_astronomy)
 
-    elif data_option == "Weather Data":
-        st.write("### Weather Data")
-        st.dataframe(weather_data)
+    elif data_option == "Top 5 Sports Cars":
+        st.write("### Top 5 Sports Cars")
+        st.dataframe(cars_data)
         # Add widgets to filter by temperature and humidity
-        temp_filter = st.slider("Filter by Temperature (°C)", -10.0, 40.0, (-10.0, 40.0))
-        humidity_filter = st.slider("Filter by Humidity (%)", 0, 100, (0, 100))
-        filtered_weather = weather_data[
-            weather_data["Temperature (°C)"].between(temp_filter[0], temp_filter[1]) &
-            weather_data["Humidity (%)"].between(humidity_filter[0], humidity_filter[1])
+        
+        Horsepower_filter = st.slider("Filter by Horsepower (hp)", 1000, 3000, (1000, 3000))
+        filtered_cars = cars_data[
+            cars_data["Horsepower"].between(Horsepower_filter[1000], Horsepower_filter[3000])
         ]
-        st.write(f"Filtered Results for Temperature {temp_filter} and Humidity {humidity_filter}:")
-        st.dataframe(filtered_weather)
+        st.write(f"Filtered Results for Horsepower {Horsepower_filter}:")
+        st.dataframe(filtered_cars)
         
         
 
@@ -139,6 +137,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
